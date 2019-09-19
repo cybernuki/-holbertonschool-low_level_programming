@@ -27,7 +27,7 @@ int main(void)
 					putchar(' ');
 					putchar(i1);
 					putchar(j1);
-					if (i < '9' || j < '9' || i1 < '9' || j1 < '9')
+					if (i < '9' || j < '8' || i1 < '9' || j1 < '9')
 					{
 						putchar(',');
 						putchar(' ');

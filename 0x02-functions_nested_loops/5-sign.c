@@ -33,7 +33,6 @@ int main(void)
 	putchar(r + '0');
 	putchar('\n');
 	return (0);
-	return (0);
 }
 
 int print_sign(int c)

@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	
-	return(0);
+	printf("Holberton\n");
+	return (0);
 }

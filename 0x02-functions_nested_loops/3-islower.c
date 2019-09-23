@@ -1,26 +1,10 @@
-#include <stdio.h>
 #include <ctype.h>
-
-int _islower(int c);
-
 /**
- * main - Entry point
- * Des: main function
- * Return: Always 0 (Success)
+ * _islower - evaluate if the given char is a lowecase letter
+ * @c: the char to be evualuate
+ *
+ * Return: 1 if it is, 0 in otherwise
  */
-int main(void)
-{
-	int r;
-
-	r = _islower('H');
-	putchar(r + '0');
-	r = _islower('o');
-	putchar(r + '0');
-	r = _islower(108);
-	putchar(r + '0');
-	putchar('\n');
-	return (0);
-}
 
 int _islower(int c)
 {

@@ -1,40 +1,14 @@
-#include <stdio.h>
+#include "holberton.h"
 #include <ctype.h>
 
-int print_sign(int n);
-
 /**
- * main - Entry point
- * Des: main function
- * Return: Always 0 (Success)
+ * print_sign - evaluate the sign of a given number
+ * @c: The number to be evaluate
+ *
+ * Return: 1 if it is positive and also print '+';
+ * 0 if it is zero and print '0';
+ * -1 if it is negative and print '-'
  */
-int main(void)
-{
-	int r;
-
-	r = print_sign(98);
-	putchar(',');
-	putchar(' ');
-	putchar(r + '0');
-	putchar('\n');
-	r = print_sign(0);
-	putchar(',');
-	putchar(' ');
-	putchar(r + '0');
-	putchar('\n');
-	r = print_sign(0xff);
-	putchar(',');
-	putchar(' ');
-	putchar(r + '0');
-	putchar('\n');
-	r = print_sign(-1);
-	putchar(',');
-	putchar(' ');
-	putchar(r + '0');
-	putchar('\n');
-	return (0);
-}
-
 int print_sign(int c)
 {
 	int result;
@@ -42,17 +16,17 @@ int print_sign(int c)
 	if (c > 0)
 	{
 		result = 1;
-		putchar('+');
+		_putchar('+');
 	}
 	else if (c < 0)
 	{
 		result = -1;
-		putchar('-');
+		_putchar('-');
 	}
 	else
 	{
 		result = 0;
-		putchar('0');
+		_putchar('0');
 	}
 	return (result);
 }

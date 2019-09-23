@@ -1,30 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
 
-int print_last_digit(int);
 /**
- * main - Entry point
- * Des: main function
- * Return: Always 0 (Success)
+ * print_last_digit - Prints the last digit of a given number
+ * @c: The number
+ *
+ * Return: The last digit of the number
  */
-int main(void)
-{
-	int r;
-
-	print_last_digit(98);
-	print_last_digit(0);
-	r = print_last_digit(-1024);
-	putchar('0' + r);
-	putchar('\n');
-	return (0);
-}
-
 int print_last_digit(int c)
 {
 	int last_digit;
 
-	c = abs(c);
+	c = _abs(c);
 	last_digit = c % 10;
-	printf("%d", last_digit);
+	_putchar(last_digit + '0');
 	return (last_digit);
 }

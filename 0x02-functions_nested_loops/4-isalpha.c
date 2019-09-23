@@ -1,29 +1,10 @@
-#include <stdio.h>
 #include <ctype.h>
-
-int _isalpha(int c);
-
 /**
- * main - Entry point
- * Des: main function
- * Return: Always 0 (Success)
+ * _isalpha - evaluate if a giving char is a alphanumeric
+ * @c: The character to evaluate
+ *
+ * Return: 1 if it is; 0 in otherwise
  */
-int main(void)
-{
-	int r;
-
-	r = _isalpha('H');
-	putchar(r + '0');
-	r = _isalpha('o');
-	putchar(r + '0');
-	r = _isalpha(108);
-	putchar(r + '0');
-	r = _isalpha(';');
-	putchar(r + '0');
-	putchar('\n');
-	return (0);
-}
-
 int _isalpha(int c)
 {
 	int result;

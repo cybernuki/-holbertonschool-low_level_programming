@@ -1,19 +1,11 @@
-#include <stdio.h>
-
-
-void print_alphabet_x10(void);
+#include "holberton.h"
 
 /**
- * main - Entry point
- * Des: main function
- * Return: Always 0 (Success)
+ * print_alphabet_x10 - prints the alphabet 10 times
+ * @void: does not recive any parameter
+ *
+ * Return: does not has any return
  */
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
-}
-
 void print_alphabet_x10(void)
 {
 	int i;
@@ -23,8 +15,8 @@ void print_alphabet_x10(void)
 	{
 		for (j = 'a'; j <= 'z'; j++)
 		{
-			putchar(j);
+			_putchar(j);
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }

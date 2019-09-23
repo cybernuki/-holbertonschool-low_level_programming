@@ -1,25 +1,17 @@
-#include <stdio.h>
-
-
-void print_alphabet(void);
+#include "holberton.h"
 /**
- * main - Entry point
- * Des: main function
- * Return: Always 0 (Success)
+ * print_alphabet - writes the character c to stdout
+ * @void: no parameter
+ *
+ * Return: void.
  */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
 void print_alphabet(void)
 {
 	int i;
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
-		putchar(i);
+		_putchar(i);
 	}
-	putchar('\n');
+	_putchar('\n');
 }

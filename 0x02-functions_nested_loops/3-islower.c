@@ -10,6 +10,6 @@ int _islower(int c)
 {
 	int result;
 
-	result = (islower(c) > 0 ? 1 : 0);
+	result = (islower(c) > 0) ? 1 : 0;
 	return (result);
 }

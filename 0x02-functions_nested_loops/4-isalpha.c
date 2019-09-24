@@ -1,4 +1,4 @@
-#include <ctype.h>
+#include "holberton.h"
 /**
  * _isalpha - evaluate if a giving char is a alphanumeric
  * @c: The character to evaluate
@@ -9,6 +9,6 @@ int _isalpha(int c)
 {
 	int result;
 
-	result = (isalpha(c) > 0 ? 1 : 0);
+	result = (_islower == 1) ? 0 : 1;
 	return (result);
 }

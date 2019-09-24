@@ -9,6 +9,6 @@ int _isalpha(int c)
 {
 	int result;
 
-	result = (_islower == 1) ? 0 : 1;
+	result = ((_islower == 1) || (_islower == 0)) ? 1 : 0;
 	return (result);
 }

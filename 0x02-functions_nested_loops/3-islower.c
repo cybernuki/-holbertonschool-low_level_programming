@@ -1,4 +1,3 @@
-#include <ctype.h>
 /**
  * _islower - evaluate if the given char is a lowecase letter
  * @c: the char to be evualuate
@@ -10,6 +9,6 @@ int _islower(int c)
 {
 	int result;
 
-	result = (islower(c) > 0) ? 1 : 0;
+	result = ((c >= 'a') || (c <= 'z')) ? 1 : 0;
 	return (result);
 }

@@ -26,17 +26,21 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(' ');
 
-				if (first_digit != 0)
-					_putchar('0' + first_digit);
-				else
+				if (factor >= 100)
+				{
+					_putchar(first_digit + '0');
+					_putchar(medium_digit + '0');
+				}
+				else if (factor < 100 && factor >= 10)
+				{
 					_putchar(' ');
-
-				if ((medium_digit == 0  && first_digit != 0)
-				    || (medium_digit > 0 && first_digit == 0))
-					_putchar('0' + medium_digit);
+					_putchar(medium_digit + '0');
+				}
 				else
+				{
 					_putchar(' ');
-
+					_putchar(' ');
+				}
 				_putchar('0' + last_digit);
 			}
 			_putchar('\n');

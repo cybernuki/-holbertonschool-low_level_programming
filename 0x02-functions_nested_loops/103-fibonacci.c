@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	unsigned long int f_1, f_2, fibonacci_number;
+	long int f_1, f_2, fibonacci_number;
 
 	f_1 = 0;
 	f_2 = 1;
@@ -18,7 +18,7 @@ int main(void)
 
 		if (fibonacci_number % 2 == 0)
 		{
-			printf("%lu\n", fibonacci_number);
+			printf("%li\n", fibonacci_number);
 		}
 		f_1 = f_2;
 		f_2 = fibonacci_number;

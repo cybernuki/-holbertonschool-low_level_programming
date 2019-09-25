@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long long int f_1, f_2, fibonacci_number;
+	long int f_1, f_2, fibonacci_number;
 	int i;
 
 	f_1 = 0;
@@ -15,7 +15,7 @@ int main(void)
 	for (i = 1; i <= 50; i++)
 	{
 		fibonacci_number = f_1 + f_2;
-		printf("%lli", fibonacci_number);
+		printf("%ld", fibonacci_number);
 		if (i < 50)
 			printf(", ");
 		f_1 = f_2;

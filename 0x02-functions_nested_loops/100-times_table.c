@@ -21,7 +21,7 @@ void print_times_table(int n)
 				factor = (i * j);
 				last_digit = (factor % 10);
 				medium_digit = ((factor / 10) % 10);
-				first_digit = ((factor /10) / 10);
+				first_digit = ((factor / 10) / 10);
 
 				_putchar(',');
 				_putchar(' ');

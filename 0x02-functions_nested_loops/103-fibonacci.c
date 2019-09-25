@@ -18,7 +18,7 @@ int main(void)
 
 		if (fibonacci_number % 2 == 0)
 		{
-			printf("%li\n", fibonacci_number);
+			printf("%ld\n", fibonacci_number);
 		}
 		f_1 = f_2;
 		f_2 = fibonacci_number;

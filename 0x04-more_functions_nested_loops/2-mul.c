@@ -1,10 +1,13 @@
 /**
- * name -
- * @:
- * Return:
+ * mul - multiplies two integers.
+ * @a: first number
+ * @b: second number
+ * Return: the product of a x b
  */
-int main(void)
+int mul(int a, int b)
 {
+	int product;
 
-	return (0);
+	product = a * b;
+	return (product);
 }

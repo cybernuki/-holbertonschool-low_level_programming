@@ -10,23 +10,27 @@ void print_number(int n)
 	int i, power;
 
 	power = 1;
-	while ((n / power) > 10)
+
+	if (n < 0)
+	{
+		n *= -1;
+		_putchar('-');
+	}
+
+	while ((n / power) > 9)
 	{
 		power *= 10;
 	}
 
-	if (n < 0)
-		_putchar('-');
-
 	if (n == 0)
+	{
 		_putchar('0');
-
+	}
 	else
 	{
-		for (i = power; i >= 1 ; i /= 10)
+		for (i = power; i >= 1; i /= 10)
 		{
-			_putchar(((n / i) % 10) + '0');
+			_putchar((n / i) % 10 + '0');
 		}
 	}
-	_putchar('\n');
 }

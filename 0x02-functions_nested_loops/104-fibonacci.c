@@ -14,9 +14,7 @@ int main(void)
 
 	for (i = 1; i <= 99; i++)
 	{
-		printf("%1.0f",
-		       ((pow(phi, i) - pow((phi * -1), (i * -1))) / sqrt(5))
-		       * -1);
+		printf("%1.0f", pow(phi, i) / sqrt(5));
 		if (i < 99)
 			printf(", ");
 	}

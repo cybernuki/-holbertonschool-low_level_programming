@@ -13,24 +13,25 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		power *= -1;
 		_putchar('-');
 	}
 
-	while ((n / power) > 9)
+	while ((n / power) > 9 || (n / power) < -9)
 	{
 		power *= 10;
-	}
-
-	if (n == 0)
-	{
-		_putchar('0');
 	}
 	else
 	{
 		for (i = power; i >= 1 || i <= -1; i /= 10)
 		{
-			_putchar((n / i) % 10 + '0');
+			if (n < 0)
+			{
+				_putchar((n / i) % 10 * -1 + '0');
+			}
+			else
+			{
+				_putchar((n / i) % 10 + '0');
+			}
 		}
 	}
 }

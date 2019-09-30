@@ -20,18 +20,16 @@ void print_number(int n)
 	{
 		power *= 10;
 	}
-	else
+	for (i = power; i >= 1 || i <= -1; i /= 10)
 	{
-		for (i = power; i >= 1 || i <= -1; i /= 10)
+		if (n < 0)
 		{
-			if (n < 0)
-			{
-				_putchar((n / i) % 10 * -1 + '0');
-			}
-			else
-			{
-				_putchar((n / i) % 10 + '0');
-			}
+			_putchar((n / i) % 10 * -1 + '0');
+		}
+		else
+		{
+			_putchar((n / i) % 10 + '0');
 		}
 	}
+
 }

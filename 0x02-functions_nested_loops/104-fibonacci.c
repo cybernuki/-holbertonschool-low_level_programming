@@ -7,28 +7,29 @@
  */
 int main(void)
 {
-	int i, j;
-	double Phi, phi, first_part, second_part;
+	int i = 0;
+	unsigned long n1, n2, quotient1, quotient2, rem1, rem2;
 
-	i = 11;
-	Phi = (1 + sqrt(5)) / 2;
-	phi = (1 - sqrt(5)) / 2;
-
-	for (i = 2; i <= 99; i++)
+	n1 = 1, n2 = 2;
+	while (i < 90)
 	{
-		first_part = 1;
-		second_part = 1;
-		for (j = 0; j < i; j++)
-		{
-			first_part *= Phi;
-			second_part *= phi;
-		}
-
-		printf("%1.0f", ((first_part - second_part) / sqrt(5)));
-
-		if (i != 99)
-			printf(", ");
+		printf("%lu, %lu, ", n1, n2);
+		n1 += n2, n2 += n1, i += 2;
 	}
-	printf("\n");
+	printf("%lu, %lu, ", n1, n2);
+	quotient1 = n1 / 100, quotient2 = n2 / 100;
+	rem1 = n1 % 100, rem2 = n2 % 100;
+	while (i < 96)
+	{
+		n1 = quotient1 + quotient2, n2 = rem1 + rem2;
+		n2 > 99 ? n1++ : n2;
+		n2 = n2 % 100;
+		printf("%lu", n1);
+		printf(n2 < 10 ? "0" : "");
+		printf("%lu", n2);
+		printf(i < 95 ? ", " : "\n");
+		quotient1 = quotient2, quotient2 = n1;
+		rem1 = rem2, rem2 = n2, i++;
+	}
 	return (0);
 }

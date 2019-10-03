@@ -1,9 +1,9 @@
 /**
- * _strncpy - copis a string or n bytes into other
+ * _strncpy - copy a string or n bytes into other
  * @dest: destination string
  * @src: src string
  * @n: number of bytes to be copied
- * Return:
+ * Return: a pointer to the dest array
  */
 char *_strncpy(char *dest, char *src, int n)
 {
@@ -11,7 +11,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	for (i = 0; i < n && *(src + i) != '\0'; i++)
 	{
-		*(dest + i ) = *(src + i);
+		*(dest + i) = *(src + i);
 
 	}
 

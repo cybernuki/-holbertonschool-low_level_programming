@@ -17,7 +17,7 @@ int _strcmp(char *s1, char *s2)
 	while (*(s2 + size_s2) != '\0')
 		size_s2++;
 
-	result = (size_s1 < size_s2) ? -5 : 5;
+	result = (size_s1 < size_s2) ? -15 : 15;
 
 	return (result);
 }

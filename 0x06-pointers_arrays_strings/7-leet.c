@@ -3,7 +3,7 @@
  * @s: a string
  * Return: a pointer to the string
  */
-char *leet (char *s)
+char *leet(char *s)
 {
 	char *s_copy = s;
 	char leet[] = {'4', '3', '0', '7', '1'};

@@ -10,9 +10,9 @@ char *rot13(char *s)
 	char *s_copy = s;
 	int index;
 
-	while (*s_copy != '\n')
+	while (*s_copy != '\0')
 	{
-		for (index = 0; index < 26; index++)
+		for (index = 0; first[index] != '\0'; index++)
 		{
 			if (*s_copy == first[index])
 			{
@@ -20,6 +20,7 @@ char *rot13(char *s)
 				break;
 			}
 		}
+		s_copy++;
 	}
 	return (s);
 }

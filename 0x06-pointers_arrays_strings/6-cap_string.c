@@ -6,8 +6,8 @@
 int isSpecial(char letter)
 {
 	int result = 0;
-	char specials = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"',
-			 '(', ')', '{', '}');
+	char specials[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"',
+			   '(', ')', '{', '}'};
 	int i;
 
 	for (i = 0; i < 13; i++)

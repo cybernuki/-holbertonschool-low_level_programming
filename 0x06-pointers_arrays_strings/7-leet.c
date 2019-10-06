@@ -13,7 +13,7 @@ char *leet (char *s)
 
 	while (*s_copy != '\0')
 	{
-		for (index = 0; index < 4; index++)
+		for (index = 0; index < 5; index++)
 		{
 			if (*s_copy == lower[index] || *s_copy == upper[index])
 			{

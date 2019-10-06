@@ -17,6 +17,7 @@ char *rot13(char *s)
 			if (*s_copy == first[index])
 			{
 				*s_copy = second[index];
+				break;
 			}
 		}
 	}

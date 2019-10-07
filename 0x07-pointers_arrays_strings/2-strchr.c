@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * _strchr - Locates a character in a string
  * @s: a string;
@@ -7,13 +8,20 @@
  */
 char *_strchr(char *s, char c)
 {
+	int i = 0;
 
-	while (*s != c)
+	while (s[i] != '\0')
 	{
-		if (*s == '\0')
+		if (s[i] == c)
 			break;
-		s++;
+		i++;
 	}
 
-	return (s);
+	if (s[i] != '\0')
+		return (s + i);
+	else
+	{
+		s = NULL;
+		return (s);
+	}
 }

@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * _strbrk - searches a string for any set of byte
+ * _strpbrk - searches a string for any set of byte
  * @s: string objetive
  * @accept: set of bytes
  * Return: a pointer to the byte in s that matches one of the bytes
@@ -8,7 +8,7 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-        int  i, j;
+	int  i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{

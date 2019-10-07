@@ -3,7 +3,7 @@
  * @s: a string
  * Return: a pointer to the string
  */
-char *leet (char *s)
+char *leet(char *s)
 {
 	char *s_copy = s;
 	char leet[] = {'4', '3', '0', '7', '1'};
@@ -13,7 +13,7 @@ char *leet (char *s)
 
 	while (*s_copy != '\0')
 	{
-		for (index = 0; index < 4; index++)
+		for (index = 0; index < 5; index++)
 		{
 			if (*s_copy == lower[index] || *s_copy == upper[index])
 			{

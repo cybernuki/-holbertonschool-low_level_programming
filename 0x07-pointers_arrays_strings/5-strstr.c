@@ -2,7 +2,7 @@
  * _strstr - Find a sub string in a string
  * @haystack: a pointer to the first string
  * @needle: a pointer to the substring
- * return: a pointer to the first value of the string or NULL
+ * Return: a pointer to the first value of the string or NULL
  */
 char *_strstr(char *haystack, char *needle)
 {

@@ -18,7 +18,7 @@ char *_strdup(char *str)
 		{
 			int i = 0;
 
-			while (i <= len)
+			while (i < len)
 			{
 				p[i] = str[i];
 				i++;
@@ -40,7 +40,7 @@ char *_strdup(char *str)
 int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
-		return (0);
+		return (1);
 	else
 		return (_strlen_recursion(s + 1) + 1);
 }

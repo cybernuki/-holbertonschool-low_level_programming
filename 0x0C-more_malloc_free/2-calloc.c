@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 /**
  * _calloc - allocaes memory for an array, using malloc, and set all
  * entries with 0.

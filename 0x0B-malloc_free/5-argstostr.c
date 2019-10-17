@@ -18,7 +18,7 @@ char *argstostr(int ac, char **av)
 		for (i = 0; i < ac; i++)
 			size += _strlen_recursion(av[i]);
 
-		p = (char *) malloc(size * sizeof(*p));
+		p = (char *) malloc(size + ac + 1 * sizeof(*p));
 
 		if (p != NULL)
 		{
@@ -53,7 +53,7 @@ char *argstostr(int ac, char **av)
 int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
-		return (1);
+		return (0);
 	else
 		return (_strlen_recursion(s + 1) + 1);
 }

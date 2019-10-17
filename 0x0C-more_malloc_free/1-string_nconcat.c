@@ -13,8 +13,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int index = 0, size1 = 0, size2 = 0;
 	char *p;
 
-	s1 = (s1 == NULL) ? '\0' : s1;
-	s2 = (s2 == NULL) ? '\0' : s2;
+	s1 = (s1 == NULL) ? "" : s1;
+	s2 = (s2 == NULL) ? "" : s2;
 
 	size1 = _strlen_recursion(s1);
 	size2 = _strlen_recursion(s2);

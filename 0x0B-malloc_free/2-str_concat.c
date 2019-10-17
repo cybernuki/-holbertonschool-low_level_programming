@@ -15,8 +15,9 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 
 	len1 = (s1 == NULL) ? 0 : _strlen_recursion(s1);
+	s1 = (s1 == NULL) ? "" : s1;
 	len2 = (s2 == NULL) ? 0 : _strlen_recursion(s2);
-
+	s2 = (s2 == NULL) ? "" : s2;
 
 	size = (len1 + len2) * sizeof(char) + 1;
 	p = create_array(size, '\0');
@@ -29,8 +30,9 @@ char *str_concat(char *s1, char *s2)
 			p[i] = s1[i];
 
 		for (i = len1, j = 0; i < size && j < size - 1; i++, j++)
+		{
 			p[i] = s2[j];
-
+		}
 		return (p);
 	}
 	else

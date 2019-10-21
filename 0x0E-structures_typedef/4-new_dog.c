@@ -39,7 +39,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return (dog);
 }
 /**
- * _strlen_recursion - returns the length of a string, recursively
+ * _strlen - returns the length of a string, recursively
  * @s: a pointer to the first value of the string
  * Return: The length of the string
  */

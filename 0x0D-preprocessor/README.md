@@ -1,0 +1,1 @@
+Hello macros in preprocessor

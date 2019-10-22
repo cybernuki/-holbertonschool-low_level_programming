@@ -26,11 +26,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	dog->name = malloc(name_len);
 	if (dog->name == NULL)
+	{
+		free(dog);
 		return (NULL);
+	}
 
 	dog->owner = malloc(owner_len);
 	if (dog->owner == NULL)
+	{
+		free(dog->name);
+		free(dog);
 		return (NULL);
+	}
 
 	_memcpy(dog->name, name, name_len);
 	_memcpy(dog->owner, owner, owner_len);

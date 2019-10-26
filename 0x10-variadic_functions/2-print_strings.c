@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 /**
- * print_numbers - it prints strings followed by a new line.
+ * print_strings - it prints strings followed by a new line.
  * @separator: is the separation char to each number
  * @n: it is the number of parameters
  * Return: Nothing

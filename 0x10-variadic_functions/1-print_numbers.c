@@ -7,27 +7,25 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	if (separator != NULL)
+	if (n == 0)
+		printf("\n");
+	else
 	{
-		if (n == 0)
-			printf("\n");
-		else
+		unsigned int i = n;
+		va_list ap;
+
+		va_start(ap, n);
+
+		while (i > 0)
 		{
-			unsigned int i = n;
-			va_list ap;
+			printf("%d", va_arg(ap, int));
 
-			va_start(ap, n);
-
-			while (i > 0)
-			{
-				printf("%d", va_arg(ap, int));
-
-				if (i > 1)
-					printf("%s", separator);
-				i--;
-			}
-			printf("\n");
-			va_end(ap);
+			if (i > 1 && separator != NULL)
+				printf("%s", separator);
+			i--;
 		}
+		printf("\n");
+		va_end(ap);
 	}
+
 }

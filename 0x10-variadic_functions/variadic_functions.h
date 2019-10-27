@@ -2,7 +2,6 @@
 #define VARIADIC_FUNCTIONS_H
 
 #include <stdarg.h>
-#include <stdlib.h>
 #include <stdio.h>
 
 int sum_them_all(const unsigned int n, ...);
@@ -14,6 +13,7 @@ void put_char(va_list argument);
 void put_string(va_list argument);
 void put_float(va_list argument);
 void put_integer(va_list argument);
+
 
 /**
  * struct function_map - struct map

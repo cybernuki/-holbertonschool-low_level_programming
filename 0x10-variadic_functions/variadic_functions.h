@@ -10,10 +10,10 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
-void put_char(va_list argument, int isSeparation);
-void put_string(va_list argument, int isSeparation);
-void put_float(va_list argument, int isSeparation);
-void put_integer(va_list argument, int isSeparation);
+void put_char(va_list argument);
+void put_string(va_list argument);
+void put_float(va_list argument);
+void put_integer(va_list argument);
 
 /**
  * struct function_map - struct map
@@ -23,7 +23,7 @@ void put_integer(va_list argument, int isSeparation);
 typedef struct function_map
 {
 	char type;
-	void (*f)(va_list, int);
+	void (*f)(va_list);
 } map;
 
 #endif

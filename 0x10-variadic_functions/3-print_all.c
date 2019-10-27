@@ -25,7 +25,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == map[j].type)
 			{
-				map[j].f(arg, format[i + 1] != '\0');
+				map[j].f(arg);
+				if (format[i + 1] != '\0')
+					printf(", ");
 				break;
 			}
 			j++;
@@ -38,54 +40,43 @@ void print_all(const char * const format, ...)
 /**
  * put_char - prints a char
  * @argument: is the argument to be printed
- * @isSeparation: a byte that says if it needs to print a separation
  * Return: Nothing
  */
-void put_char(va_list argument, int isSeparation)
+void put_char(va_list argument)
 {
 	printf("%c", va_arg(argument, int));
-	if (isSeparation)
-		printf(", ");
 }
 /**
  * put_string - prints a string
  * @argument: is the argument to be printed
- * @isSeparation: a byte that says if it needs to print a separation
  * Return: Nothing
  */
-void put_string(va_list argument, int isSeparation)
+void put_string(va_list argument)
 {
 	char *str = va_arg(argument, char *);
 
-	if (str)
-		printf("%s", str);
-	else
+	if (!str)
+	{
 		printf("(nil)");
-
-	if (isSeparation)
-		printf(", ");
+		return;
+	}
+	printf("%s", str);
 }
 /**
  * put_float - prints a float
  * @argument: is the argument to be printed
- * @isSeparation: a byte that says if it needs to print a separation
  * Return: Nothing
  */
-void put_float(va_list argument, int isSeparation)
+void put_float(va_list argument)
 {
 	printf("%f", va_arg(argument, double));
-	if (isSeparation)
-		printf(", ");
 }
 /**
  * put_integer - prints an integer
  * @argument: is the argument to be printed
- * @isSeparation: a byte that says if it needs to print a separation
  * Return: Nothing
  */
-void put_integer(va_list argument, int isSeparation)
+void put_integer(va_list argument)
 {
 	printf("%d", va_arg(argument, int));
-	if (isSeparation)
-		printf(", ");
 }

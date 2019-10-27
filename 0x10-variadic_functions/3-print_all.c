@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-
 /**
  * print_all - prints anything
  * @format: is the char with the defined formats
@@ -16,6 +15,7 @@ void print_all(const char * const format, ...)
 		{'\0', NULL}
 	};
 	va_list arg;
+	char *separator = "";
 
 	va_start(arg, format);
 	while (format && format[i])
@@ -25,10 +25,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == map[j].type)
 			{
+				printf("%s", separator);
 				map[j].f(arg);
-				if (format[i + 1] != '\0')
-					printf(", ");
-				break;
+				separator = ", ";
 			}
 			j++;
 		}

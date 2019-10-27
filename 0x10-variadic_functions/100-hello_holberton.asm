@@ -8,13 +8,13 @@
 
 section .data
 
-	    message db "Hello, world!", nl
+	    message db "Hello, Holberton", nl
 	    message_len equ $-message
 
 section .text
-	global _start
+	global main
 
-_start:
+main:
 	    mov rax, sys_write
 	    mov rdi, stdout
 	    mov rsi, message

@@ -10,4 +10,20 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
+void put_char(va_list argument, int isSeparation);
+void put_string(va_list argument, int isSeparation);
+void put_float(va_list argument, int isSeparation);
+void put_integer(va_list argument, int isSeparation);
+
+/**
+ * struct function_map - struct map
+ * @type: is the representative char to the function
+ * @f: is the function associated
+ */
+typedef struct function_map
+{
+	char type;
+	void (*f)(va_list, int);
+} map;
+
 #endif

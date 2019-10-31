@@ -3,6 +3,7 @@
  * add_node_end - creates a new node at the end of the linked list
  * @head: is the reference to the head;
  * @str: is the string to be saved
+ * Return: a node
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -22,7 +23,8 @@ list_t *add_node_end(list_t **head, const char *str)
  * add_node - creates a new node at the end of the linked list
  * @head: is the reference to the head;
  * @str: is the string to be saved
- */
+ * Return: a node
+*/
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *node;

@@ -3,31 +3,11 @@
  * add_node_end - creates a new node at the end of the linked list
  * @head: is the reference to the head;
  * @str: is the string to be saved
- * Return: a node
+ * Return: a node<
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *node = NULL, *actualNode;
-
-	actualNode = *head;
-	if (actualNode == NULL)
-		node = add_node(&actualNode, str);
-
-	while (actualNode != NULL)
-		actualNode = actualNode->next;
-
-	node = add_node(&actualNode, str);
-	return (node);
-}
-/**
- * add_node - creates a new node at the end of the linked list
- * @head: is the reference to the head;
- * @str: is the string to be saved
- * Return: a node
-*/
-list_t *add_node(list_t **head, const char *str)
-{
-	list_t *node;
+	list_t *node, *actualNode = *head;
 	int size = 0;
 
 	node = malloc(sizeof(node));
@@ -40,7 +20,15 @@ list_t *add_node(list_t **head, const char *str)
 
 	node->str = strdup(str);
 	node->len = size;
-	node->next = *head;
-	*head = node;
+	node->next = NULL;
+
+	if (*head == NULL)
+		*head = node;
+	else
+	{
+		while (actualNode->next != NULL)
+			actualNode = actualNode->next;
+		actualNode->next = node;
+	}
 	return (node);
 }

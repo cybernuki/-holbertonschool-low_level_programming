@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * free_listint - free a list
  * @head: is the head of the list

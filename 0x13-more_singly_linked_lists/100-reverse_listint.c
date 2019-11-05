@@ -1,5 +1,9 @@
 #include "lists.h"
-
+/**
+ * reverse_listint - Reverse a given listint_t
+ * @head: is the pointer to the head
+ * Return: head to the new reverse list
+ */
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *curr = NULL, *next = NULL;

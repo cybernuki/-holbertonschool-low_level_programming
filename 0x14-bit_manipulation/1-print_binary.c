@@ -1,7 +1,9 @@
 #include <limits.h>
 #include "holberton.h"
 /**
- * print_binary - prints the binary representation of a
+ * print_binary - prints the binary representation of a number
+ * @n: is the given number
+ * Return: Nothign
  */
 void print_binary(unsigned long int n)
 {

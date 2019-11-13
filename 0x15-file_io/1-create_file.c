@@ -17,9 +17,10 @@ int create_file(const char *filename, char *text_content)
 	if (f_d == -1)
 		return (-1);
 
-	if (text_content)
-		if (write(f_d, text_content, sizeof(text_content) == -1))
-		    return (-1);
+	if (!text_content)
+		return (-1);
+	if (write(f_d, text_content, sizeof(text_content) == -1))
+		return (-1);
 
 	close(f_d);
 	return (1);

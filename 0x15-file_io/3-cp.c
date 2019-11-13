@@ -55,19 +55,17 @@ int main(int argc, char *argv[])
 	}
 
 	f_from = open(argv[1], O_RDONLY);
-	f_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-
 	if (f_from == -1)
 		exceptionRead(argv[1]);
 
+	f_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (f_to == -1)
 		exceptionWrite(argv[2]);
 
 	hasR = read(f_from, buff, 1024);
-
 	while (hasR > 0)
 	{
-		hasW = write(f_from, buff, hasR);
+		hasW = write(f_to, buff, hasR);
 		if (hasW == -1)
 			exceptionWrite(argv[2]);
 		hasR = read(f_from, buff, 1024);

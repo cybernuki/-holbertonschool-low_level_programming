@@ -7,12 +7,12 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int f_d, hasW;
+	int f_d, hasW, size = 0;
 
 	if (!filename)
 		return (-1);
 
-	f_d = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	f_d = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 
 	if (f_d == -1)
 		return (-1);
@@ -20,7 +20,10 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 		return (-1);
 
-	hasW = write(f_d, text_content, sizeof(text_content));
+	while (text_content[size] != '\0')
+		size++;
+
+	hasW = write(f_d, text_content, size);
 
 	if (hasW == -1)
 		return (-1);

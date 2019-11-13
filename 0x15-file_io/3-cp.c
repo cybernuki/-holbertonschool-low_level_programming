@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 
 	if (hasR == -1)
 		exceptionRead(argv[1]);
-	exceptionClose(close(f_from) == -1, argv[1]);
-	exceptionClose(close(f_to) == -1, argv[2]);
+	exceptionClose(close(f_from), argv[1]);
+	exceptionClose(close(f_to), argv[2]);
 	return (0);
 }

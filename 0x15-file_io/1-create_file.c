@@ -20,7 +20,7 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 		return (-1);
 
-	hasW = write(f_d, text_content, sizeof(text_content) == -1);
+	hasW = write(f_d, text_content, sizeof(text_content));
 
 	if (hasW == -1)
 		return (-1);

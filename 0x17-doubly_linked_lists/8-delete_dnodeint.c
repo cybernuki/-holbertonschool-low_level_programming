@@ -1,9 +1,8 @@
 #include "lists.h"
 /**
  * delete_dnodeint_at_index - removes a node in a given position
- * @h: head of the list
- * @idx: index of the new node
- * @n: value of the new node
+ * @head: head of the list
+ * @index: index of the new node
  * Return: 1 if it succeeded, -1 if it failed
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
@@ -24,11 +23,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	if (!to_delete)
 		return (-1);
-	else
-	{
-		to_delete->prev->next = to_delete->next;
-		to_delete->next->prev = to_delete->prev;
-		free(to_delete);
-		return (1);
-	}
+	to_delete->prev->next = to_delete->next;
+	to_delete->next->prev = to_delete->prev;
+	free(to_delete);
+	return (1);
 }

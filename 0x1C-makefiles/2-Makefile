@@ -1,0 +1,15 @@
+# Compile the program
+# Jhonatan (cybernuki) Arenas <1164@holbertonschool.com>
+CC = gcc
+SRC = main.c holberton.c
+OBJ = main.o holberton.o
+NAME = holberton
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+main.o:
+	$(CC) -c -o main.o main.c
+
+holberton.o:
+	$(CC) -c -o holberton.o holberton.c

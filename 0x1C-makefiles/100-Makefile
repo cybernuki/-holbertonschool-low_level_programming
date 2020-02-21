@@ -1,0 +1,24 @@
+# Compile the program
+# Jhonatan (cybernuki) Arenas <1164@holbertonschool.com>
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o)
+NAME = holberton
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+.PHONY : clean
+clean:
+	$(RM) *~ $(NAME)
+
+.PHONY : oclean
+oclean:
+	$(RM) $(OBJ)
+
+.PHONY : fclean
+fclean: clean oclean
+
+.PHONE : re
+re : fclean all

@@ -12,24 +12,24 @@
  */
 int aux_function(int *array, size_t top, size_t low, int value)
 {
-    size_t mid, i;
+	size_t mid, i;
 
-    /*Print sub array */
-    printf("Searching in array: ");
-    for (i = low; i <= top; i++)
-        (i < top) ? printf("%d,", array[i]) : printf("%d\n", array[i]);
+	/*Print sub array */
+	printf("Searching in array: ");
+	for (i = low; i <= top; i++)
+		(i < top) ? printf("%d,", array[i]) : printf("%d\n", array[i]);
 
-    if (array[top] == value)
-        return top;
-    if (array[low] == value)
-        return low;
+	if (array[top] == value)
+		return (top);
+	if (array[low] == value)
+		return (low);
 
-    mid = (top + low) / 2;
-    if (top == low)
-        return (-1);
-    if (value > array[mid])
-        return aux_function(array, top, mid + 1, value);
-    return aux_function(array, mid - 1, low, value);
+	mid = (top + low) / 2;
+	if (top == low)
+		return (-1);
+	if (value > array[mid])
+		return (aux_function(array, top, mid + 1, value));
+	return (aux_function(array, mid - 1, low, value));
 }
 
 /**
@@ -41,7 +41,7 @@ int aux_function(int *array, size_t top, size_t low, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
-    if (!array)
-        return (-1);
-    return aux_function(array, size - 1, (size_t) 0, value);
+	if (!array)
+		return (-1);
+	return (aux_function(array, size - 1, (size_t) 0, value));
 }

@@ -5,7 +5,7 @@
  *  @array: Is the array with the data
  *  @size: Is the size of the array
  *  @value: is the value to search
- *  @Return: The index where the value is or -1 in case of be missing 
+ *  Return: The index where the value is or -1 in case of be missing 
  */
 int linear_search(int *array, size_t size, int value)
 {
